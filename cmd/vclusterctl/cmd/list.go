@@ -53,7 +53,8 @@ vcluster list --output json
 vcluster list --namespace test
 #######################################################
 	`,
-		Args: cobra.NoArgs,
+		Args:    cobra.NoArgs,
+		Aliases: []string{"ls"},
 		RunE: func(cobraCmd *cobra.Command, args []string) error {
 			return cmd.Run(cobraCmd, args)
 		},
